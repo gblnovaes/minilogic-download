@@ -63,6 +63,8 @@ Se o AppImage não abrir por falta de FUSE (`libfuse2`), rode-o sem montar: `./M
 No Windows (PowerShell): `Get-FileHash .\MiniLogic-Setup-0.5.0.exe -Algorithm SHA256`  
 No Linux: `sha256sum MiniLogic-0.5.0-linux-x86_64.AppImage`
 
+As versões posteriores à 0.5.0 também publicam o arquivo `SHA256SUMS.txt` (e `SHA256SUMS-windows.txt`, quando os arquivos do Windows foram enviados de um build local). Baixe-o junto com o instalador e compare: no Linux, `sha256sum -c SHA256SUMS.txt --ignore-missing`; no Windows, compare o hash do `Get-FileHash` com a linha do seu arquivo.
+
 ## Aviso do Windows (SmartScreen)
 
 Os executáveis **ainda não têm assinatura digital**. Por isso o Windows SmartScreen pode mostrar "O Windows protegeu o seu computador" na primeira execução. Para continuar: clique em **Mais informações** e depois em **Executar assim mesmo**. Baixe sempre desta página de Releases.
